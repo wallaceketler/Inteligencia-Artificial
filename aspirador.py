@@ -6,9 +6,9 @@ pos = ''             #A ou B
 cont = 0             #conta quanta sujeira limpou
 cont2 = 0            #determina quantas voltas o aspirador dá
 
-sujeiraA = int(input("Digite a sujeira na posição A"))
-sujeiraB = int(input("Digite a sujeira na posição B"))
-pos = str(input("Digite a posição inicial"))
+sujeiraA = int(input("Digite a sujeira na posição A "))
+sujeiraB = int(input("Digite a sujeira na posição B "))
+pos = str(input("Digite a posição inicial "))
 
 if (sujeiraA != 1 and sujeiraA != 0) or (sujeiraB!= 1 and sujeiraB!=0) or (pos != "A" and pos != "B" and pos != "a" and pos != "b"):
     print("Dados inseridos inválidos, tente novamente")
