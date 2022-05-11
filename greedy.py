@@ -8,9 +8,7 @@ def greedy_best_first_search(initial_node, frontiers, explored):
     actual_h = 11               #atual valor de heurística
     lowest_value = ''           #menor valor da fronteira
     lowest_node = ''            #nó de menor valor da fronteira
-    #child_node = ''
-    #actions = []
-    
+ 
     while(1):
         #define fronteira do nó atual
         if(actual_node == '331'):frontier = frontiers[0]
@@ -67,20 +65,21 @@ def greedy_best_first_search(initial_node, frontiers, explored):
         explored.append(actual_node)
         ##################################################
 
+        #para todas ações possíveis daquele estado, faz trocas úteis
+        for a in range(0,len(frontier)):
+            if(frontier[a] not in explored or frontier[a] not in frontier):
+                frontier.append(frontier[a])
+            elif(frontier[a] in frontier):
+                for j in range(0, len(frontier)):
+                    if(frontier[a] > frontier[j]):
+                        frontier[j] = frontier[a]
 
-        #for a in actions:
-            ####-
-        #    if((child_node not in explored) and (child_node not in frontier)):
-        #        frontier.append(child_node)
-        #    elif((child_node in frontier)):  
-                #falta condição
-               
 initial_node = '331'
 explored = []
 
 #tree
 frontier331 = [('130'), ('230'), ('220')]
-frontier130 = [('331'), ('231')]
+frontier130 = [('331'), ('231') ]
 frontier230 = [('331')]
 frontier220 = [('231'),('331')]
 frontier231 = [('130'),('030'),('220')]
