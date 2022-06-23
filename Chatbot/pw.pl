@@ -148,3 +148,4 @@ ans10(sair):- write_ln("Até mais!"),!.
 ans10(Resposta):-
 	(Resposta >= 1 , Resposta <5) -> pw18, fail;
     (Resposta < 1 ; Resposta >4) -> pw19.
+
