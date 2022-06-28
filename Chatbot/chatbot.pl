@@ -34,6 +34,7 @@ opcoes:-
     format("->status    [status de suas compras]"),nl,
     format("->contato   [contato de algum dos nossos atendentes]"),nl,
     format("->endereco  [endereço de nossa loja física]"),nl,
+    format("->sair      [sair da loja online]"),nl,
     read(Resposta),
     encaminha(Resposta).
 
@@ -123,6 +124,7 @@ invalido:-
 
 %Parte das chamadas de respostas
 
+encaminha(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 encaminha(Resposta):-
     (Resposta ==  comprar) ->  compra,fail;
     (Resposta ==  trocar) ->   troca,fail;
@@ -130,54 +132,55 @@ encaminha(Resposta):-
     (Resposta ==  status) ->   status,fail;
     (Resposta ==  contato) ->  contato,fail;
     (Resposta ==  endereco) ->  endereco,fail;
-    write_ln("Desculpe, não entendi, digite novamente, por favor").
+    write_ln("Desculpe, não entendi, digite novamente, por favor"), opcoes.
     
-respostacompra(sair):- write_ln("Até mais!"),!.
+respostacompra(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 respostacompra(Resposta):-
     (Resposta >= 1 , Resposta <8) -> concluicompra1, fail;
-    (Resposta < 1 ; Resposta >7) -> invalido.
+    (Resposta < 1 ; Resposta >7) ->invalido.
 
-confirmacompra(sair):- write_ln("Até mais!"),!.
+confirmacompra(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 confirmacompra(Resposta):- 
     (Resposta == sim) ->  concluicompra2,fail;
-    opcoes.
+    write_ln("Compra cancelada..."),opcoes.
 
-respostatroca1(sair):- write_ln("Até mais!"),!.
+respostatroca1(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 respostatroca1(Resposta):-
     (Resposta >= 1 , Resposta <5) -> troca2, fail;
     (Resposta < 1 ; Resposta >4) ->  invalido.
 
-respostatroca2(sair):- write_ln("Até mais!"),!.
+respostatroca2(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 respostatroca2(Resposta):-
     (Resposta >= 1 , Resposta <5) -> concluitroca1, fail;
     (Resposta < 1 ; Resposta >4) ->  invalido.
 
-confirmatroca(sair):- write_ln("Até mais!"),!.
+confirmatroca(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 confirmatroca(Resposta):-
     (Resposta == sim) -> concluitroca2, fail;
     write_ln("Troca cancelada..."), opcoes.
 
-respostadevolve(sair):- write_ln("Até mais!"),!.
+respostadevolve(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 respostadevolve(Resposta):-
     (Resposta >= 1 , Resposta <5) -> concluidevolve1, fail;
     (Resposta < 1 ; Resposta >4) ->  invalido.
 
-confirmadevolve(sair):- write_ln("Até mais!"),!.
+confirmadevolve(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.
 confirmadevolve(Resposta):-
     (Resposta == sim) ->  concluidevolve2, fail;
     write_ln("Devolução cancelada..."), opcoes.
 
-valida1(sair):- write_ln("Até mais!"),!.	%verifica se quer entrar ou cadastrar
+valida1(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.	%verifica se quer entrar ou cadastrar
 valida1(Resposta):-
     (Resposta==entrar) ->	  login,fail;	
-    (Resposta==cadastrar) ->  cadastro.
+    (Resposta==cadastrar) ->  cadastro,fail;
+    write_ln("Não entendi, tente novamente, por favor"), start.
 
-valida2(sair):- write_ln("Até mais!"),!.	%verifica se conta existe no login
+valida2(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.	%verifica se conta existe no login
 valida2(Login, Senha):-
     (cadastrado(Login, Senha)) ->  write_ln("Logado"), opcoes, fail;
     write_ln("Conta não encontrada"), start.
 
-valida3(sair):- write_ln("Até mais!"),!.	%cadastra
+valida3(sair):- write_ln("Obrigado pela preferência, volte sempre!"),!.	%cadastra
 valida3():-   
     write_ln("Parabéns, você foi cadastrado!"), opcoes.
 
