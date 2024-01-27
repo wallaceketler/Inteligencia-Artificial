@@ -1,4 +1,95 @@
-# Repositório de Inteligência Artificial
+# Artificial Intelligence Repository 🇺🇲
+
+Welcome to my repository dedicated to codes and projects related to artificial intelligence. Here, you will find implementations in various areas, covering fundamental concepts to practical applications. Feel free to explore different topics and experiment with the codes.
+
+## Covered Topics
+
+### Neural Networks
+
+This directory contains implementations of neural networks.
+
+#### Multilayer Perceptron (MLP)
+
+The **Multilayer Perceptron** is a type of artificial neural network with at least three layers of nodes: an input layer, one or more hidden layers, and an output layer. This algorithm is a significant milestone in the field of neural networks, providing the ability to learn and represent complex relationships in data.
+
+**Key Features:**
+
+- **Layered Architecture:** MLP organizes neurons into layers, allowing the transformation of input data through multiple processing steps.
+  
+- **Supervised Learning:** It is typically trained using supervised methods, where the network is adjusted based on labeled examples.
+
+- **Activation Functions:** Each node in a layer uses non-linear activation functions to introduce essential non-linearities for representing complex patterns.
+
+- **Backpropagation:** The algorithm uses backpropagation to adjust the weights of the network, minimizing the error between predictions and actual labels.
+
+**Practical Applications:**
+
+- **Pattern Recognition:** MLP is widely used in tasks such as pattern recognition in images, voice, and text.
+
+- **Prediction and Regression:** It can be applied to time series forecasting and regression problems.
+
+- **Classification:** It is effective in classifying data into distinct categories.
+
+### Neuro-Fuzzy
+
+We present implementations that combine concepts of neural networks and fuzzy logic for modeling and controlling complex systems. Understand how these approaches can be integrated to improve adaptability and interpretability.
+
+### Fuzzy
+
+In this directory, you will find codes related to fuzzy logic. Explore the application of fuzzy sets and rules for handling uncertainties and decision-making in different contexts. 
+
+For now, there are codes for water tank volume control and electrical current control for water heating.
+
+### Regression and Classification
+
+With algorithms dedicated to regression and classification, this directory covers techniques for data prediction and categorization. This is the only topic that utilizes pre-existing algorithms from Python language libraries.
+
+### Greedy Search
+
+Here, you will find implementations of greedy search algorithms, an efficient approach to solving optimization problems.
+
+For now, there is only one implementation with greedy search for the missionaries and cannibals problem.
+
+### Clustering Algorithms
+
+Dedicated to clustering techniques, this directory covers algorithms that organize unlabeled data into meaningful groups. Experiment with different methods and evaluate their effectiveness on various datasets.
+
+For now, only the C-means method has been used.
+
+#### C-Means Clustering Algorithm
+
+The C-Means clustering algorithm, also known as fuzzy k-means, is a clustering technique that aims to partition a dataset into groups or clusters, allowing members of the same cluster to share similar characteristics. Unlike traditional k-means, C-Means assigns each data point a probability of belonging to each cluster.
+
+##### Key Steps:
+
+1. **Initialization:** Define the desired number of clusters (k) and assign random initial centers to each cluster.
+
+2. **Membership Assignment:** Calculate the probability of each data point belonging to each cluster based on the Euclidean distance between the point and the cluster centers.
+
+3. **Centers Update:** Update the cluster centers weighted by the probability values calculated in the previous step.
+
+4. **Iteration:** Repeat steps 2 and 3 until the membership assignment to clusters does not change significantly.
+
+##### Applications:
+
+- Pattern Analysis
+- Pattern Recognition
+- Image Segmentation
+
+C-Means is effective in handling data that may belong to more than one cluster simultaneously, providing a more granular view of relationships between data points. However, the proper choice of the number of clusters (k) and sensitivity to initial center values can affect clustering results.
+
+### Reactive Models
+
+Explore implementations of reactive models, which are fundamental for systems based on emergent behavior. Understand how these models can simulate complex and adaptive behaviors.
+
+### Prolog Chatbot
+
+This directory contains a chatbot implemented in the Prolog language. Discover how declarative programming logic can be applied to create conversational agents.
+
+---------------------------------------------------
+
+
+# Repositório de Inteligência Artificial 🇧🇷
 
 Bem-vindo ao meu repositório dedicado a códigos e projetos relacionados à inteligência artificial. Aqui, você encontrará implementações em diversas áreas, abordando desde conceitos fundamentais até aplicações práticas. Fique à vontade para explorar os diferentes tópicos e experimentar com os códigos.
 
